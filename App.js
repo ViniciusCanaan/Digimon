@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, FlatList, StyleSheet, ActivityIndicator, Image, TouchableOpacity } from 'react-native';
+import { View, FlatList, StyleSheet, ActivityIndicator, Image, TouchableOpacity, StatusBar } from 'react-native';
 import styled from 'styled-components';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -50,7 +50,7 @@ const TextLevelDigimon = styled.Text`
 const Bottom = styled.View`
   height:50;
   width:100%;
-  background-color: #131313;
+  background-color: #fff;
   align-items: center;
   justify-content:space-around;
   flex-direction: row;
@@ -83,6 +83,10 @@ const App = () => {
 
   return (
     <Page>
+    <StatusBar
+      barStyle="light-content"
+      backgroundColor="#131313"
+    />
       <Header>
         <TextoHeader>Lista de Digimons</TextoHeader>
       </Header>
